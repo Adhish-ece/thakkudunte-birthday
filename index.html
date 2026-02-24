@@ -143,6 +143,14 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
 .eq span:nth-child(3){animation-duration:.7s;animation-delay:.2s;}
 @keyframes eqA{0%,100%{height:4px;}50%{height:14px;}}
 
+/* PAGE 1B — SPECIAL SONG */
+@keyframes fltH{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-10px) scale(1.15);}}
+@keyframes waveAnim{0%,100%{transform:scaleY(1);}50%{transform:scaleY(1.8);}}
+.wbar.active{background:linear-gradient(180deg,#ff6b9d,#ff2d55)!important;animation:waveAnim ease-in-out infinite;}
+.wbar.active:nth-child(odd){animation-duration:.5s;}
+.wbar.active:nth-child(even){animation-duration:.7s;}
+.wbar.active:nth-child(3n){animation-duration:.4s;}
+
 /* PAGE 3 — STORY */
 .stbox{background:rgba(255,255,255,.04);border:1px solid rgba(255,60,100,.15);border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:inset 0 0 40px rgba(255,0,50,.04);}
 .stxt{font-family:'Cormorant Garamond',serif;font-size:clamp(.93rem,2.7vw,1.1rem);color:rgba(255,210,220,.88);line-height:1.9;text-align:left;min-height:130px;}
@@ -279,8 +287,77 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
       <p class="sub">The world became a little brighter<br>the moment you were born. <br> (ithra pokki paranja mathiya?😂)</p>
       <div class="pill">🚨 Alert — Agane Aa monna Janicha Divasam yethi.</div>
       <div class="div-line"><span>♥</span></div>
-      <button class="btn" onclick="goTo(2)">Yes… Continue 💖</button>
+      <button class="btn" onclick="goTo(1.5)">Yes… Continue 💖</button>
     </div>
+  </div>
+</div>
+
+<!-- PAGE 1B — HER PHOTO + AUTOPLAY SONG -->
+<div class="page" id="pg1b">
+  <div style="position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;width:100%;height:100%;">
+
+    <!-- Big animated photo, no captions -->
+    <div style="position:relative;display:flex;align-items:center;justify-content:center;width:min(280px,72vw);height:min(280px,72vw);">
+      <div style="position:absolute;inset:-60px;border-radius:50%;border:1.5px dashed rgba(255,60,100,.2);animation:sr 14s linear infinite;"></div>
+      <div style="position:absolute;inset:-30px;border-radius:50%;border:1.5px solid rgba(255,45,85,.3);animation:gr 2.4s ease-in-out infinite;"></div>
+      <div style="position:absolute;inset:-46px;border-radius:50%;border:1px solid rgba(255,100,150,.18);animation:gr 3.5s ease-in-out infinite reverse;"></div>
+      <span style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:22px;animation:fltH 3s ease-in-out infinite;">💖</span>
+      <span style="position:absolute;top:15%;right:-24px;font-size:18px;animation:fltH 3.6s ease-in-out infinite;animation-delay:.5s;">✨</span>
+      <span style="position:absolute;bottom:12%;right:-20px;font-size:20px;animation:fltH 4.1s ease-in-out infinite;animation-delay:1.1s;">💕</span>
+      <span style="position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:18px;animation:fltH 3.3s ease-in-out infinite;animation-delay:.3s;">🌸</span>
+      <span style="position:absolute;top:15%;left:-24px;font-size:18px;animation:fltH 3.9s ease-in-out infinite;animation-delay:.8s;">⭐</span>
+      <span style="position:absolute;bottom:12%;left:-20px;font-size:20px;animation:fltH 4.4s ease-in-out infinite;animation-delay:1.4s;">💫</span>
+      <div class="pw" style="width:min(240px,64vw);height:min(240px,64vw);">
+        <div class="pr2"></div><div class="pr1"></div>
+        <div class="glow-r"></div>
+        <div class="pi"><img src="photo/photo.PNG" alt=""></div>
+      </div>
+    </div>
+
+    <!-- Waveform bars only -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:3px;height:34px;">
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:8px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:14px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:22px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:30px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:34px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:28px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:20px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:14px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:8px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:18px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:26px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:34px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:34px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:28px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:20px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:12px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:6px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:16px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:24px;"></div>
+      <div class="wbar" style="width:4px;background:rgba(255,80,120,.35);border-radius:3px;height:32px;"></div>
+    </div>
+
+    <!-- Progress bar -->
+    <div style="width:min(260px,76vw);">
+      <div style="width:100%;height:4px;background:rgba(255,255,255,.12);border-radius:3px;">
+        <div id="specialFill" style="height:100%;width:0%;border-radius:3px;background:linear-gradient(90deg,#ff2d55,#ff6b9d);transition:width .2s linear;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:5px;">
+        <span id="specialCT" style="font-size:.62rem;color:rgba(255,150,170,.55);">0:00</span>
+        <span id="specialDU" style="font-size:.62rem;color:rgba(255,150,170,.55);">0:00</span>
+      </div>
+    </div>
+
+    <audio id="specialAudio" src="song/song4.mp3" preload="auto"></audio>
+
+    <button class="btn btn-hidden" id="specialContinueBtn" onclick="goTo(2)">
+      uff cute voice anneppa 🥹 Continue →
+    </button>
+    <p id="specialHint" style="font-size:.74rem;color:rgba(255,120,150,.45);font-style:italic;text-align:center;margin-top:-14px;transition:opacity .5s;">
+      🔒 continue unlocks when the song ends…
+    </p>
+
   </div>
 </div>
 
@@ -577,13 +654,58 @@ function stopAllMusic() {
 }
 
 /* ══════════════════════════════════════
+   SPECIAL SONG PAGE (pg1b)
+══════════════════════════════════════ */
+(function(){
+  function fmt(s){const m=Math.floor(s/60);return m+':'+(Math.floor(s%60)<10?'0':'')+Math.floor(s%60);}
+
+  // Called by goTo(1.5) — autoplay immediately
+  window.initSpecialPage = function(){
+    const audio = document.getElementById('specialAudio');
+    const bars = document.querySelectorAll('.wbar');
+    if(!audio) return;
+    audio.currentTime = 0;
+    audio.play().catch(()=>{});
+    bars.forEach(b=>b.classList.add('active'));
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const audio = document.getElementById('specialAudio');
+    if(!audio) return;
+
+    audio.addEventListener('loadedmetadata', function(){
+      const du = document.getElementById('specialDU');
+      if(du) du.textContent = fmt(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', function(){
+      if(!audio.duration) return;
+      const fill = document.getElementById('specialFill');
+      const ct = document.getElementById('specialCT');
+      if(fill) fill.style.width = (audio.currentTime/audio.duration*100)+'%';
+      if(ct) ct.textContent = fmt(audio.currentTime);
+    });
+
+    audio.addEventListener('ended', function(){
+      document.querySelectorAll('.wbar').forEach(b=>b.classList.remove('active'));
+      const btn = document.getElementById('specialContinueBtn');
+      const hint = document.getElementById('specialHint');
+      if(btn) btn.classList.add('show');
+      if(hint) hint.style.opacity = '0';
+    });
+  });
+})();
+
+
+/* ══════════════════════════════════════
    ROUTER
 ══════════════════════════════════════ */
 let currentPage = 1;
-const pageIds = {1:'pg1',2:'pg2',3:'pg3',3.5:'pg3b',4:'pg4',5:'pg5',6:'pg6',7:'pg7',10:'pgF'};
+const pageIds = {1:'pg1',1.5:'pg1b',2:'pg2',3:'pg3',3.5:'pg3b',4:'pg4',5:'pg5',6:'pg6',7:'pg7',10:'pgF'};
 const quizNext = {4:5,5:6,6:7,7:10};
 const bgs = {
   1:'radial-gradient(ellipse at 30% 20%,#4a0020 0%,#1a0010 40%,#0d0008 100%)',
+  1.5:'radial-gradient(ellipse at 50% 20%,#4a0020 0%,#1a0010 40%,#0d0008 100%)',
   2:'radial-gradient(ellipse at 50% 0%,#3d0018 0%,#150008 50%,#0a0005 100%)',
   3:'radial-gradient(ellipse at 40% 60%,#3a0018 0%,#110007 50%,#0a0005 100%)',
   3.5:'radial-gradient(ellipse at 55% 45%,#420018 0%,#180008 45%,#080004 100%)',
@@ -608,6 +730,7 @@ function goTo(n) {
   }
   document.getElementById('vbg').style.background = bgs[n] || bgs[1];
   document.getElementById('trophyEl').style.display = n===6 ? 'block' : 'none';
+  if (n === 1.5) initSpecialPage();
   if (n === 3) startTyping();
   if (n === 4) buildQuiz('q1');
   if (n === 5) buildQuiz('q2');
@@ -1103,7 +1226,7 @@ function firePopper(ox, oy, big) {
 
 /* COUNTDOWN LOCK */
 (function(){
-  const UNLOCK=new Date('2026-05-04T00:00:00');
+  const UNLOCK=new Date('2026-01-04T00:00:00');
   function pad(n){return String(n).padStart(2,'0');}
   function tick(){
     const diff=UNLOCK-new Date();
