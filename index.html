@@ -355,7 +355,7 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
       uff cute voice anneppa 🥹 Continue →
     </button>
     <p id="specialHint" style="font-size:.74rem;color:rgba(255,120,150,.45);font-style:italic;text-align:center;margin-top:-14px;transition:opacity .5s;">
-      🔒 continue unlocks when the song ends…
+      🔒 continue s when the song ends…
     </p>
 
   </div>
@@ -446,7 +446,7 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
         <p class="stxt" id="stxt"><span class="cursor" id="cur"></span></p>
       </div>
       <div class="div-line"><span>♥</span></div>
-      <button class="btn btn-hidden" id="stbtn" onclick="goTo(3.5)">Unlock Your Surprise 🎁</button>
+      <button class="btn btn-hidden" id="stbtn" onclick="goTo(3.5)"> Your Surprise 🎁</button>
     </div>
   </div>
 </div>
@@ -462,7 +462,7 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
       <p class="sub" style="margin-bottom:22px;">
         But wait — before I let you in,<br>
         you have to <strong style="color:#ff6b9d;">prove you know me!</strong> 😌<br>
-        <span style="font-size:.85em;opacity:.75;">Answer 4 little questions to unlock your surprise 🎀</span>
+        <span style="font-size:.85em;opacity:.75;">Answer 4 little questions to  your surprise 🎀</span>
       </p>
       <div style="display:flex;justify-content:center;gap:10px;margin-bottom:24px;flex-wrap:wrap;">
         <div style="background:rgba(255,45,85,.12);border:1.5px solid rgba(255,80,120,.35);border-radius:50px;padding:8px 16px;font-size:.75rem;color:rgba(255,190,210,.85);font-weight:600;">❓ Question 1</div>
@@ -1226,10 +1226,10 @@ function firePopper(ox, oy, big) {
 
 /* COUNTDOWN LOCK */
 (function(){
-  const UNLOCK=new Date('2026-05-04T00:00:00');
+  const UNLOCK=new Date('2027-02-24T00:00:00');
   function pad(n){return String(n).padStart(2,'0');}
   function tick(){
-    const diff=UNLOCK-new Date();
+    const diff=-new Date();
     if(diff<=0){const l=document.getElementById('lockScreen');if(l){l.style.transition='opacity .8s ease';l.style.opacity='0';setTimeout(()=>l.remove(),800);}clearInterval(timer);return;}
     document.getElementById('cdDays').textContent=pad(Math.floor(diff/86400000));
     document.getElementById('cdHours').textContent=pad(Math.floor((diff%86400000)/3600000));
