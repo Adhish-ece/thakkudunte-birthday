@@ -244,7 +244,7 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
       <div style="position:absolute;inset:-2px;border-radius:34px;background:conic-gradient(from 0deg,#ff2d55,#ff6b9d,#ff0040,#c0002a,#ff2d55);animation:rB 4.5s linear infinite;filter:blur(2px);opacity:.6;z-index:-1;"></div>
       <div style="font-size:52px;margin-bottom:8px;animation:fe 3s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(255,60,100,.7));">🎂</div>
       <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,120,150,.55);font-weight:500;margin-bottom:12px;">✦ Coming Soon ✦</div>
-      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,4.5vw,2.2rem);font-weight:700;color:#fff;margin-bottom:6px;text-shadow:0 0 40px rgba(255,80,120,.4);">This s on<br><span style="color:#ff4d7d;">May 4 💖</span></h1>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,4.5vw,2.2rem);font-weight:700;color:#fff;margin-bottom:6px;text-shadow:0 0 40px rgba(255,80,120,.4);">This s on<br><span style="color:#ff4d7d;">Feb 24 💖</span></h1>
       <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,175,195,.8);font-size:clamp(.85rem,2.2vw,1rem);margin-bottom:24px;line-height:1.6;">Something special is waiting for you…<br>patience, Thakkudu 🌹</p>
       <div style="display:flex;justify-content:center;align-items:flex-start;gap:8px;margin-bottom:22px;">
         <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;"><div id="cdDays" class="cdn">00</div><div class="cdl">Days</div></div>
@@ -255,7 +255,7 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
         <div class="cds">:</div>
         <div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;"><div id="cdSecs" class="cdn">00</div><div class="cdl">Secs</div></div>
       </div>
-      <div style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#cc0033,#ff2d55);color:#fff;font-weight:600;font-size:.78rem;padding:10px 20px;border-radius:50px;box-shadow:0 6px 24px rgba(255,0,60,.5);animation:pg 2s ease-in-out infinite;">🔒 Locked until May 4</div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#cc0033,#ff2d55);color:#fff;font-weight:600;font-size:.78rem;padding:10px 20px;border-radius:50px;box-shadow:0 6px 24px rgba(255,0,60,.5);animation:pg 2s ease-in-out infinite;">🔒 Locked until Feb 24</div>
     </div>
   </div>
 </div>
@@ -281,9 +281,9 @@ h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05
   <div class="cw" style="width:min(510px,92vw);">
     <div class="cg"></div>
     <div class="card">
-      <div class="tline">✦ May 4 ✦ A Special Day ✦</div>
+      <div class="tline">✦ Feb 24 ✦ A Special Day ✦</div>
       <span class="bige">👀</span>
-      <h1>Wait… Is it <span>May 4</span> already?</h1>
+      <h1>Wait… Is it <span>Feb 24</span> already?</h1>
       <p class="sub">The world became a little brighter<br>the moment you were born. <br> (ithra pokki paranja mathiya?😂)</p>
       <div class="pill">🚨 Alert — Agane Aa monna Janicha Divasam yethi.</div>
       <div class="div-line"><span>♥</span></div>
@@ -1226,10 +1226,10 @@ function firePopper(ox, oy, big) {
 
 /* COUNTDOWN LOCK */
 (function(){
-  const UNLOCK=new Date('2027-02-24T00:00:00');
+   const UNLOCK=new Date('2027-02-24T00:00:00');
   function pad(n){return String(n).padStart(2,'0');}
   function tick(){
-    const diff=-new Date();
+    const diff=UNLOCK-new Date();
     if(diff<=0){const l=document.getElementById('lockScreen');if(l){l.style.transition='opacity .8s ease';l.style.opacity='0';setTimeout(()=>l.remove(),800);}clearInterval(timer);return;}
     document.getElementById('cdDays').textContent=pad(Math.floor(diff/86400000));
     document.getElementById('cdHours').textContent=pad(Math.floor((diff%86400000)/3600000));
